@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Agenda de Contatos</title>
+	<link rel="icon" href="{% static "general/img/agenda v1.1.png" %}">
+	<link rel="stylesheet" href="{% static "general/css/style.css" %}">
+    {% block 'head' %}{% endblock 'head' %}
+</head>
+
+<body>
+	<div class="container">
+        {% block 'conteudo' %}{% endblock 'conteudo' %}
+	</div>
+</body>
+
+</html>

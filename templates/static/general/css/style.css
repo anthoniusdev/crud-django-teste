@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+body img {
+	max-width: 100%;
+}
+
+h1 {
+	color: #66BBFF;
+	display: flex;
+	flex-direction: column;
+}
+
+.Botao01 {
+	text-decoration: none;
+	background-color: #66BBFF;
+	padding: 5px 10px 5px 10px;
+	color: #FFF;
+	font-size: 2.0em;
+	font-weight: 700;
+	border-radius: 15px;
+	cursor: pointer;
+	border: 0;
+}
+
+.Caixa01,
+.Caixa02 {
+	padding: 15px;
+	margin-bottom: 10px;
+	border: 1px solid #66BBFF;
+	border-radius: 20px;
+}
+
+.Caixa01, .Caixa02 {
+	width: 320px;
+}
+
+.frmContato {
+	display: contents;
+}
+
+#tabela {
+	margin-top: 30px;
+}
+
+#tabela thead,
+#tabela th {
+	border: 1px solid;
+	padding: 10px;
+	text-align: center;
+
+}
+
+#tabela thead {
+	text-align: left;
+	background-color: #66BBFF;
+	border-color: #66BBFF;
+	color: #FFF;
+}
+
+#tabela tbody {
+	background-color: rgb(192, 192, 192);
+	color: #FFF;
+	text-align: center;
+}
+
+#Botoes {
+	display: flex;
+}
+
+.Botao02 {
+	text-decoration: none;
+	background-color: #66BBFF;
+	padding: 5px 10px 5px 10px;
+	color: #FFF;
+	font-size: 1.5em;
+	font-weight: 700;
+	cursor: pointer;
+	border: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.Botao03 {
+	text-decoration: none;
+	background-color: #D51213;
+	padding: 0px 4px 1px 5px;
+	color: #FFF;
+	font-size: 1.6em;
+	font-weight: 700;
+	border-radius: 0px;
+}
+
+.Botao04 {
+	padding: 10px;
+	margin-top: 1em;
+	border-radius: 40px;
+	font-size: 1.6em;
+	font-weight: 700;
+	text-decoration: none;
+	background-color: #D51213;
+	color: #FFFFFF;
+}
+
+#Caixa03 {
+	padding: 15px;
+	margin-bottom: 10px;
+	border: 1px solid #FF0000;
+}

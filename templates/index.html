@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% load static %}
+{% block 'conteudo' %}
+	<img src="{% static "general/img/agenda v1.0.png" %}" alt="Imagem de agenda">
+	<h1>Agenda de contatos</h1>
+	<a href="{% url "agenda" %}" class="Botao01">Acessar</a>
+{% endblock 'conteudo' %}

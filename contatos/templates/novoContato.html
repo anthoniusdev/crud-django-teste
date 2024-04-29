@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block 'conteudo' %}
+<h1>Criar novo contato</h1>
+	<form class="frmContato" name="frmContato" action="{% url "novoContato" %}" method="POST"> {% csrf_token %}
+		<table>
+			<tr>
+				<td><input class="Caixa01" type="text" name="nome" placeholder="Nome" value="{{nome}}"></td>
+			</tr>
+			<tr>
+				<td><input class="Caixa02" type="text" name="fone" placeholder="Telefone"></td>
+			</tr>
+			<tr>
+				<td><input class="Caixa01" type="text" name="email" placeholder="E-mail" value="{{email}}"></td>
+			</tr>
+		</table>
+		<input class="Botao01" type="button" value="Adicionar" onclick="validar()">
+	</form>
+<script src="{% static "contatos/js/validador.js" %}"></script>
+{% if alert != null %}
+<script>
+    alert("{{alert}}");
+</script>
+{% endif %}
+{% endblock 'conteudo' %}
