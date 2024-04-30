@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Contato
 from django.http import HttpResponse
 # Create your views here.
@@ -21,3 +21,20 @@ def novoContato(request):
                           email=email)
         contato.save()
         return redirect('agenda')
+    
+def editarContato(request, idContato):
+    if request.method == 'GET':
+        contato = get_object_or_404(Contato, id=idContato)
+        return render(request, 'editarContato.html', {'contato': contato})
+    elif request.method == 'POST':
+        contato = get_object_or_404(Contato, id=idContato)
+        contato.nome = request.POST.get('nome')
+        contato.telefone = request.POST.get('fone')
+        contato.email = request.POST.get('email')
+        contato.save()
+        return redirect('agenda')
+    
+def excluirContato(request, idContato):
+    contato = get_object_or_404(Contato, id=idContato)
+    contato.delete()
+    return redirect('agenda')

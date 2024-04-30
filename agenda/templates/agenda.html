@@ -17,13 +17,12 @@
                 <td>{{ contato.nome }}</td>
                 <td>{{ contato.telefone }}</td>
                 <td>{{ contato.email }}</td>
-                <td id="Botoes"><a
-                    href="{% url "contato/{{contato.id}}" %}" class="Botao02">Editar</a>
-                    <a href="javascript: confirmar(<%=lista.get(i).getIdcon()%>)"
-                        class="Botao03">Excluir</a></td>
-                    </tr>
-                </tbody>
-            </table>
+                <td id="Botoes">
+                    <a href="{% url "editarContato" idContato=contato.id %}" class="Botao02">Editar</a>
+                    <a href="{% url "excluirContato" idContato=contato.id%}" class="Botao03" >Excluir</a>
+                </td>
+            </tr>
         {% endfor %}
-<script src="{% static "/confirmador.js" %}"></script>
+    </tbody>
+</table>
 {% endblock 'conteudo' %}

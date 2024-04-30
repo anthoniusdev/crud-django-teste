@@ -1,0 +1,47 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block 'conteudo' %} 
+{% if contato != null %}
+<h1>Editar contato</h1>
+<form class="frmContato" name="frmContato" action="{% url "editarContato" idContato=contato.id %}" method="POST"> {% csrf_token %}
+  <table>
+    <tr>
+      <td>
+        <input
+          class="Caixa01"
+          type="text"
+          name="nome"
+          value="{{contato.nome}}"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input
+          class="Caixa02"
+          type="text"
+          name="fone"
+          value="{{contato.telefone}}"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input
+          class="Caixa01"
+          type="text"
+          name="email"
+          value="{{contato.email}}"
+        />
+      </td>
+    </tr>
+  </table>
+  <input class="Botao01" type="button" value="Salvar" onclick="validar()" />
+</form>
+<script src="{% static "contatos/js/validador.js" %}"></script>
+{% else %}
+<script>
+  window.location.href({% url "agenda" %});
+</script>
+{% endif %}
+{% endblock 'conteudo' %} 

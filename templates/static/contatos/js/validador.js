@@ -15,11 +15,11 @@ function validar() {
 		alert("Preencha o campo telefone");
 		frmContato.fone.focus();
 		return false;
-	} else if (email === "") {
-		alert("Preencha o campo email");
-		frmContato.email.focus();
+	} else if (email === ""){
+		alert("Preenchao o campo email");
+		frmContato.email.focus
 		return false;
-	} else {
+	} else{
 		document.forms["frmContato"].submit();
 	}
 }
